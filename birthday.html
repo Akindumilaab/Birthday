@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./birthday.css"> -->
+</head>
+<body>
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Ayooluwa 🎂</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Dancing+Script:wght@700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #f5c842;
+    --rose: #f7608a;
+    --blush: #ffd6e0;
+    --deep: #1a0a2e;
+    --lavender: #b98ef7;
+    --teal: #43e8d8;
+    --white: #fff8f0;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--deep);
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .stars { position: fixed; inset: 0; pointer-events: none; z-index: 0; }
+  .star {
+    position: absolute;
+    border-radius: 50%;
+    background: white;
+    animation: twinkle var(--dur, 3s) ease-in-out infinite var(--delay, 0s);
+  }
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.2; transform: scale(1); }
+    50%       { opacity: 1;   transform: scale(1.4); }
+  }
+
+  .confetti-wrap { position: fixed; inset: 0; pointer-events: none; z-index: 1; overflow: hidden; }
+  .confetto {
+    position: absolute;
+    top: -20px;
+    width: 10px;
+    height: 14px;
+    border-radius: 2px;
+    opacity: 0.9;
+    animation: fall var(--f, 4s) linear infinite var(--fd, 0s);
+  }
+  @keyframes fall {
+    0%   { transform: translateY(-20px) rotate(0deg);   opacity: 0.9; }
+    100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
+  }
+
+  .card {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 60px 50px 50px;
+    max-width: 680px;
+    width: 92%;
+  }
+
+  .crown {
+    font-size: 3.8rem;
+    display: block;
+    animation: crownBounce 1.2s ease-in-out infinite alternate;
+    margin-bottom: 6px;
+  }
+  @keyframes crownBounce {
+    from { transform: translateY(0) rotate(-6deg); }
+    to   { transform: translateY(-12px) rotate(6deg); }
+  }
+
+  .hb-line {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(2.2rem, 7vw, 3.6rem);
+    color: var(--gold);
+    display: block;
+    animation: fadeSlideDown 1s ease both;
+    text-shadow: 0 0 30px rgba(245,200,66,0.5);
+    letter-spacing: 2px;
+  }
+  @keyframes fadeSlideDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .name {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.8rem, 9vw, 5rem);
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--rose) 0%, var(--gold) 50%, var(--lavender) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: block;
+    margin: 8px 0 18px;
+    animation: fadeSlideDown 1.2s 0.3s ease both, shimmer 4s 1.5s linear infinite;
+    background-size: 200%;
+  }
+  @keyframes shimmer {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 0 auto 28px;
+    animation: fadeIn 1.4s 0.6s ease both;
+  }
+  .divider span { font-size: 1.3rem; }
+  .divider-line {
+    width: 80px;
+    height: 1.5px;
+    background: linear-gradient(to right, transparent, var(--rose), transparent);
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  .flourish {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: clamp(1.6rem, 5vw, 2.4rem);
+    color: var(--blush);
+    display: block;
+    margin-bottom: 14px;
+    animation: fadeSlideUp 1.2s 0.9s ease both;
+    line-height: 1.3;
+  }
+  @keyframes fadeSlideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .girll {
+    font-family: 'Dancing Script', cursive;
+    color: var(--teal);
+    font-size: 1.1em;
+    animation: pulse 1.5s ease-in-out infinite alternate;
+  }
+  @keyframes pulse {
+    from { text-shadow: 0 0 8px var(--teal); }
+    to   { text-shadow: 0 0 28px var(--teal), 0 0 50px rgba(67,232,216,0.4); }
+  }
+
+  .sub {
+    font-weight: 300;
+    font-size: 1rem;
+    color: rgba(255,248,240,0.6);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    animation: fadeIn 1.5s 1.2s ease both;
+    margin-bottom: 40px;
+  }
+
+  .candles {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    animation: fadeIn 1.5s 1.5s ease both;
+    margin-bottom: 8px;
+  }
+  .flame {
+    font-size: 1.6rem;
+    animation: flicker var(--fl, 0.6s) ease-in-out infinite alternate var(--fld, 0s);
+  }
+  @keyframes flicker {
+    from { transform: scaleY(1) translateY(0); opacity: 1; }
+    to   { transform: scaleY(0.85) translateY(2px); opacity: 0.75; }
+  }
+
+  .orbs { position: fixed; inset: 0; pointer-events: none; z-index: 2; }
+  .orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.15;
+    animation: drift var(--od, 12s) ease-in-out infinite alternate var(--odel, 0s);
+  }
+  @keyframes drift {
+    from { transform: translate(0, 0) scale(1); }
+    to   { transform: translate(var(--dx, 40px), var(--dy, 30px)) scale(1.15); }
+  }
+
+  .yoruba {
+    margin-top: 32px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.25rem;
+    color: var(--gold);
+    letter-spacing: 1px;
+    opacity: 0.85;
+    animation: fadeIn 2s 2s ease both;
+  }
+
+  .balloon-row {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    display: flex;
+    justify-content: space-around;
+    pointer-events: none;
+    z-index: 3;
+  }
+  .balloon {
+    font-size: 2.8rem;
+    animation: rise var(--br, 8s) ease-in-out infinite var(--brd, 0s);
+    opacity: 0.85;
+  }
+  @keyframes rise {
+    0%   { transform: translateY(0) rotate(-4deg); }
+    50%  { transform: translateY(-80px) rotate(4deg); }
+    100% { transform: translateY(0) rotate(-4deg); }
+  }
+</style>
+</head>
+<body>
+
+<div class="stars" id="stars"></div>
+
+<div class="orbs">
+  <div class="orb" style="width:400px;height:400px;background:var(--rose);top:10%;left:5%;--dx:60px;--dy:40px;--od:14s;"></div>
+  <div class="orb" style="width:350px;height:350px;background:var(--lavender);bottom:15%;right:8%;--dx:-50px;--dy:-30px;--od:11s;--odel:2s;"></div>
+  <div class="orb" style="width:300px;height:300px;background:var(--teal);top:50%;left:50%;transform:translate(-50%,-50%);--dx:30px;--dy:50px;--od:16s;--odel:1s;"></div>
+</div>
+
+<div class="confetti-wrap" id="confetti"></div>
+
+<div class="balloon-row">
+  <div class="balloon" style="--br:7s;--brd:0s;">🎈</div>
+  <div class="balloon" style="--br:9s;--brd:1.5s;">🎀</div>
+  <div class="balloon" style="--br:6s;--brd:0.8s;">🎈</div>
+  <div class="balloon" style="--br:10s;--brd:2s;">🎊</div>
+  <div class="balloon" style="--br:8s;--brd:0.3s;">🎈</div>
+  <div class="balloon" style="--br:7.5s;--brd:1.2s;">🎀</div>
+  <div class="balloon" style="--br:9.5s;--brd:0.6s;">🎈</div>
+</div>
+
+<div class="card">
+  <span class="crown">👑</span>
+  <span class="hb-line">Happy Birthday </span>
+  <span class="name">Ayooluwa</span>
+
+  <div class="divider">
+    <div class="divider-line"></div>
+    <span>🌸</span>
+    <div class="divider-line"></div>
+  </div>
+
+  <span class="flourish">Continue to Flourish,&nbsp;<span class="girll">Girllll! 🌟</span></span>
+  <p class="sub">May every dream bloom</p>
+
+  <div class="candles">
+    <div class="candle"><div class="flame" style="--fl:0.55s;--fld:0s;">🕯️</div></div>
+    <div class="candle"><div class="flame" style="--fl:0.7s;--fld:0.15s;">🕯️</div></div>
+    <div class="candle"><div class="flame" style="--fl:0.5s;--fld:0.05s;">🕯️</div></div>
+    <div class="candle"><div class="flame" style="--fl:0.65s;--fld:0.2s;">🕯️</div></div>
+    <div class="candle"><div class="flame" style="--fl:0.6s;--fld:0.1s;">🕯️</div></div>
+  </div>
+
+  <div style="font-size:2.6rem; margin-top:6px;">🎂</div>
+
+  <p class="yoruba">✨ Wa se orire laye — may life grant you all its goodness ✨</p>
+</div>
+
+<script>
+  const starsEl = document.getElementById('stars');
+  for (let i = 0; i < 120; i++) {
+    const s = document.createElement('div');
+    s.className = 'star';
+    const size = Math.random() * 3 + 1;
+    s.style.cssText = `
+      width:${size}px; height:${size}px;
+      top:${Math.random()*100}%;
+      left:${Math.random()*100}%;
+      --dur:${2 + Math.random()*4}s;
+      --delay:${Math.random()*5}s;
+    `;
+    starsEl.appendChild(s);
+  }
+
+  const confettiEl = document.getElementById('confetti');
+  const colors = ['#f5c842','#f7608a','#b98ef7','#43e8d8','#ffd6e0','#fff8f0','#ff9f43'];
+  for (let i = 0; i < 60; i++) {
+    const c = document.createElement('div');
+    c.className = 'confetto';
+    c.style.cssText = `
+      left:${Math.random()*100}%;
+      background:${colors[Math.floor(Math.random()*colors.length)]};
+      --f:${3 + Math.random()*5}s;
+      --fd:${Math.random()*6}s;
+      width:${6 + Math.random()*8}px;
+      height:${8 + Math.random()*10}px;
+      transform:rotate(${Math.random()*360}deg);
+    `;
+    confettiEl.appendChild(c);
+  }
+</script>
+</body>
+</html>
+</body>
+</html>
